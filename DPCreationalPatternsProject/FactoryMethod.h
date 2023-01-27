@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
+#include "Prototype.h"
 
 // abstract class Product
-class Unit
+class Unit : public Prototype
 {
 protected:
 	std::string name;
@@ -29,6 +30,11 @@ class InfantryUnit : public Unit
 {
 public:
 	InfantryUnit() : Unit("Infantry") {}
+	Prototype* Clone() override
+	{
+		return new InfantryUnit(*this);
+	}
+
 };
 
 
@@ -46,6 +52,10 @@ class ArcherUnit : public Unit
 {
 public:
 	ArcherUnit() : Unit("Archer") {}
+	Prototype* Clone() override
+	{
+		return new ArcherUnit(*this);
+	}
 };
 
 class ArcherFactory : public Factory
@@ -62,6 +72,10 @@ class CavalryUnit : public Unit
 {
 public:
 	CavalryUnit() : Unit("Cavalry") {}
+	Prototype* Clone() override
+	{
+		return new CavalryUnit(*this);
+	}
 };
 
 class CavalryFactory : public Factory

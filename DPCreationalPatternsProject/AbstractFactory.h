@@ -108,5 +108,44 @@ public:
 
 class AbstractFactory
 {
+public:
+	virtual InfantryUnit* CreateInfantryUnit() = 0;
+	virtual ArcherUnit* CreateArcherUnit() = 0;
+	virtual CavalryUnit* CreateCavalryUnit() = 0;
 };
 
+// Factory Rome units
+class FactoryRome : public AbstractFactory
+{
+public:
+	InfantryUnit* CreateInfantryUnit() override
+	{
+		return new InfantryUnitRome();
+	}
+	ArcherUnit* CreateArcherUnit() override
+	{
+		return new ArcherUnitRome();
+	}
+	CavalryUnit* CreateCavalryUnit() override
+	{
+		return new CavalryUnitRome();
+	}
+};
+
+// Factory Carthage units
+class FactoryCarthage : public AbstractFactory
+{
+public:
+	InfantryUnit* CreateInfantryUnit() override
+	{
+		return new InfantryUnitCarthage();
+	}
+	ArcherUnit* CreateArcherUnit() override
+	{
+		return new ArcherUnitCarthage();
+	}
+	CavalryUnit* CreateCavalryUnit() override
+	{
+		return new CavalryUnitCarthage();
+	}
+};
