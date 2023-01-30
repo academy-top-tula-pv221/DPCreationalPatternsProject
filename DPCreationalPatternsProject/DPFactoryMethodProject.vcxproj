@@ -137,6 +137,7 @@
     <ClInclude Include="FactoryMethod.h" />
     <ClInclude Include="Prototype.h" />
     <ClInclude Include="UnitBad.h" />
+    <ClInclude Include="UnitClone.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

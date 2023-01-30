@@ -185,7 +185,7 @@ void PrototypeExample()
 		}
 	};
 
-	const auto start1 = std::chrono::steady_clock::now();
+	/*const auto start1 = std::chrono::steady_clock::now();
 	Army army1("army1", 1000, 1000, 1000);
 	const auto end1 = std::chrono::steady_clock::now();
 	cout << std::chrono::duration_cast<std::chrono::microseconds>(end1 - start1).count() << "\n";
@@ -194,7 +194,7 @@ void PrototypeExample()
 	const auto start2 = std::chrono::steady_clock::now();
 	Army army1(1000, 1000, 1000, "army2");
 	const auto end2 = std::chrono::steady_clock::now();
-	cout << std::chrono::duration_cast<std::chrono::microseconds>(end2 - start2).count() << "\n";
+	cout << std::chrono::duration_cast<std::chrono::microseconds>(end2 - start2).count() << "\n";*/
 
 }
 

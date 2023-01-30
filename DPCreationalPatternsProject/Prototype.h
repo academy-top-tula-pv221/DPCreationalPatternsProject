@@ -42,8 +42,10 @@ public:
 		default:
 			break;
 		}
+		
+		auto data = std::make_pair(type, (Prototype*)factory->CreateUnit());
 
-		clones.insert(std::make_pair(type, factory->CreateUnit()));
+		clones.insert(data);
 	}
 };
 

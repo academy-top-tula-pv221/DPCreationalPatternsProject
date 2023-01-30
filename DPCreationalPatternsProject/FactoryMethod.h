@@ -22,7 +22,7 @@ class Factory
 {
 public:
 	virtual Unit* CreateUnit() = 0;
-	virtual ~Factory() {}
+	virtual ~Factory() {};
 };
 
 // Infantry
